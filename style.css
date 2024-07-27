@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    --light-bg: #4b4b4b;
+}
+
+*{
+   font-family: "Roboto", sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   text-decoration: none;
+   text-transform: capitalize;
+   transition: 0.2s linear;
+}
+*::selection{
+    background-color: aquamarine;
+    color: aqua;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 0.8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #d3ad7f;
+    border-radius: 5rem;
+}
+body{
+    background: #1f369c;
+}
+section{
+    margin: 0 auto;
+    padding: 2rem 7%;
+}
+.header {
+    background: #751791;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 1rem;
+    font-size: 1.6rem;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input {
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    border: var(--border);
+    background: var(--bg);
+    color: white;
+}
+
+.search-form label {
+    margin-left: 0.5rem;
+    font-size: 1.6rem;
+    color: white;
+    cursor: pointer;
+}
