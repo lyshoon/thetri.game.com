@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root{
-    --main-color: #d3ad7f;
+    --main-color: #433cf2;
     --black: #13131a;
     --bg: #010103;
     --border: 0.1rem solid rgba(255, 255, 255, 0.3);
@@ -9,20 +9,22 @@
 }
 
 *{
-   font-family: "Roboto", sans-serif;
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   outline: none;
-   border: none;
-   text-decoration: none;
-   text-transform: capitalize;
-   transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
 }
+
 *::selection{
     background-color: aquamarine;
     color: aqua;
 }
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -33,22 +35,27 @@ html{
 html::-webkit-scrollbar{
     width: 0.8rem;
 }
+
 html::-webkit-scrollbar-track{
     background: transparent;
 }
+
 html::-webkit-scrollbar-thumb{
     background: #d3ad7f;
     border-radius: 5rem;
 }
+
 body{
-    background: #1f369c;
+    background: #450c4b;
 }
+
 section{
     margin: 0 auto;
     padding: 2rem 7%;
 }
+
 .header {
-    background: #751791;
+    background: #c3b4c9;
     border-bottom: var(--border);
     position: fixed;
     top: 0;
@@ -56,34 +63,69 @@ section{
     right: 0;
     z-index: 1000;
 }
+
 .header .flex {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.navbar a {
-    color: white;
-    margin: 0 1rem;
-    font-size: 1.6rem;
+.header .flex .logo img{
+    height: 6rem;
 }
 
-.search-form {
+.header .flex .navbar a{
+    font-size: 2.5rem;
+    color: #1d1b70;
+    margin-left: 10rem;
+}
+
+.header .flex .navbar a:hover{
+    color: #791289;
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+#menu-btn {
+    cursor: pointer;
+    color: rgb(0, 255, 72);
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .flex .icons div{
+    cursor: pointer;
+    color: #1f369c;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .flex .icons div:hover{
+    color: #751791;
+}
+
+.header .flex .search-form{
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: #d3ad7f;
+    width: 50rem;
+    height: 5rem;
     display: flex;
     align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.header .flex .search-form.active{
+    transform: scaleY(1);
+}
+.header.flex.search-form input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color:rgb(68, 0, 255);
+    padding: 1rem;
+    text-transform: none;
 }
 
-.search-form input {
-    padding: 0.5rem;
-    font-size: 1.6rem;
-    border: var(--border);
-    background: var(--bg);
-    color: white;
-}
-
-.search-form label {
-    margin-left: 0.5rem;
-    font-size: 1.6rem;
-    color: white;
-    cursor: pointer;
-}
