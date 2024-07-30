@@ -9,17 +9,16 @@ body {
     font-family: 'Arial', sans-serif;
     font-weight: 400;
     color: white;
-    background-color: #72107f;
+    background-color: #17074a;
 }
 
 /* Header Styles */
 .header {
-    background: #b853f3;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    height: 80px;
+    padding: 0 5%;
 }
 
 .navbar {
@@ -32,28 +31,39 @@ body {
 }
 
 .logo h1 {
-    font-size: 28px;
+    margin-right: 400px;
+    font-size: 30px;
     color: #ffffff;
+    
+}
+.logo h1:hover {
+    color: #4431ea;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
-}
-
-.nav-links li {
-    margin-left: 80px;
+    gap: 30px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #fff;
-    font-size: 24px;
-    transition: color 0.3s ease;
+    font-size: 20px;
+    font-weight: 600;
+    background: transparent;
+    color: #ffff;
+    padding: 8px 16px;
+    border-radius: 99px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #72107f;
+    background: transparent;
+    color: #4431ea;
+}
+
+.nav-links:hover > a:not(:hover) {
+    background: none;
+    color: #412ecd;
 }
 
 /* Hero Section */
@@ -63,7 +73,7 @@ body {
     display: flex;
     justify-content: left;
     align-items: center;
-    background: url('img/bb.jpe') no-repeat center center/cover;
+    background: url('img/bg.jpg') no-repeat center center/cover;
 }
 
 .hero-content {
@@ -73,7 +83,7 @@ body {
 
 .hero-content h1 {
     font-size: 48px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 }
 
 .hero-content p {
@@ -90,7 +100,7 @@ section{
 .hero-content a{
     display: inline-blocks;
     color: white;
-    background: #b853f3;
+    background: #00279d;
     border: 1px solid transparent;
     padding: 10px 30px;
     line-height: 8.5;
@@ -108,7 +118,7 @@ section{
 .hero-content a.ctta{
     display: inline-blocks;
     color: white;
-    background: #b853f3;
+    background: #00279d;
     border: 1px solid transparent;
     padding: 10px 30px;
     line-height: 9;
@@ -141,6 +151,25 @@ section{
     bottom: 0;
     color: #fff;
 }
+
+@keyframes moveCharacter {
+    0% { transform: translateY(-20px); }
+    50% { transform: translateX(-20px); }
+    100% { transform: translateY(-20px); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.player img {
+    width: 500px;
+    height: auto;
+    margin-left: 120px;
+    animation: moveCharacter 4s infinite ease-in-out, fadeIn 2s ease-in-out;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
