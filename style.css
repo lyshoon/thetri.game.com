@@ -203,8 +203,8 @@ body {
 .contact
 {
     position: relative;
-    min-height: 100vh;
-    padding: 50px 50px;
+    min-height: 160vh;
+    padding: 100px 100px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -241,7 +241,7 @@ body {
 }
 .container .contactInfo .box{
     position: relative;
-    padding: 20px;
+    padding: 20px 0;
     display: flex;
     cursor: pointer;
 }
@@ -297,4 +297,101 @@ body {
     border-left: 50px solid #e8ffa4;
     padding-left:10px;
     line-height: 1em;
+}
+.container .contactInfo .sci{
+    position: relative;
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+}
+.container .contactInfo .sci li a{
+    color:#8532eb;
+    font-size: 1.5em;
+    transition: 0.25s;
+}
+.container .contactInfo .sci li a:hover{
+    color:#def98f;
+    filter: drop-shadow(0 0 5px #010101);
+}
+.container .contactForm{
+    position: relative;
+    width: 40%;
+    background:repeating-conic-gradient(from var(--a),#def98f,#4431ea,transparent 10%, transparent 50%);
+    animation: animate 6s linear infinite;
+    padding: 60px;
+}
+.container .contactForm::before{
+    content:'';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--a),#def98f,#4431ea,transparent 10%, transparent 50%) ;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+
+.container .contactForm::after{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border: 20px solid #e8ffa4;
+    background: #9a8ff9;
+}
+
+@property --a{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+@keyframes animate{
+    0%{
+        --a: 0deg;
+    }
+    100%{
+        --a: 360deg;
+    }
+}
+.container .contactForm form{
+    position: relative;
+    z-index: 10;
+}
+.container .contactForm form h2{
+    font-size: 2em;
+    color:#ffffff;
+    font-weight: 500;
+}
+.container .contactForm form .inputBox{
+    position: relative;
+    width: 100;
+    margin-top: 20px;
+}
+.container .contactForm form .inputBox input{
+    width: 100% !important;
+    padding: 5px 0;
+    font-size: 1.1em;
+    margin: 10px 0;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #def98f;
+    color:#ffff;
+    outline: none;
+    resize: none;
+}
+.container .contactForm form .inputBox span{
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    padding: 5px 0;
+    margin: 10px 0;
+    font-size: 1.1em;
+    color:#020202;
+    transition: 0.5s;
+}
+.container .contactForm form .inputBox input:focus ~ span,
+.container .contactForm form .inputBox textarea:focus ~
+span,
+.container .contactForm form .inputBox input:focus~span,
+.container .contactForm form .inputBox textarea:focus{
+    color:#e8ffa4;
+    font-size: 0.9em;
+    transform: translateY(-24px);
 }
