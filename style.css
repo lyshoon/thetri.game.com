@@ -12,6 +12,7 @@ body {
     background-color: #17074a;
     height: 100vh;
     background: url('img/bg.jpg') no-repeat center center/cover;
+    background-color: #9a8ff9;
 }
 
 /* Header Styles */
@@ -197,4 +198,103 @@ body {
     .player img {
         margin-left: 0;
     }
+}
+/*contact*/
+.contact
+{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.contact .hero-content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size: 3em;
+    color:rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+}
+.contact .content p{
+    color:aqua;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+.container{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background:pink;
+    margin-top:30px;
+}
+.container .contactInfo{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px;
+    display: flex;
+    cursor: pointer;
+}
+.container .contactInfo .box .icon{
+    position: relative;
+    min-width: 60px;
+    height: 60px;
+    background:repeating-conic-gradient(from 27.5deg,#def98f,#4431ea,transparent 10%, transparent 50%);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.container .contactInfo .box .icon::before{
+    content:'';
+    position: absolute;
+    inset:0;
+    background:repeating-conic-gradient(from 117.5deg,#def98f,#4431ea,transparent 10%, transparent 50%);
+}
+.container .contactInfo .box .icon::after{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background:pink;
+}
+.container .contactInfo .box .icon b{
+    position: absolute;
+    inset: 8px;
+    background:#def98f;
+    z-index: 2;
+}
+.container .contactInfo .box .icon i{
+    position: relative;
+    z-index: 1000;
+    color:#17074a;
+    font-size: 1.25em;  
+}
+.container .contactInfo .box .text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: #fff;
+    font-family: 300;
+}
+.container .contactInfo .box .text h3{
+    font-weight: 500;
+    color:#e8ffa4;
+}
+.container .contactInfo .txt{
+    color:#fff;
+    margin-top: 50px;
+    font-weight: 500;
+    border-left: 50px solid #e8ffa4;
+    padding-left:10px;
+    line-height: 1em;
 }
