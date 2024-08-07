@@ -395,3 +395,13 @@ span,
     font-size: 0.9em;
     transform: translateY(-24px);
 }
+
+.container .contactForm form .inputBox input[type="submit"]{
+    width: 100%;
+    background: #e8ffa4;
+    color:#010101;
+    border: none;
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
